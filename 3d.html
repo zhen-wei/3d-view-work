@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="x5-orientation" content="portrait">
+    <title>模型展示</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./style/public.css">
+    <link rel="stylesheet" href="./style/3d.css">
+    <script src="./script/public.js" async></script>
+    <script src="./script/3d.js" type="module"></script>
+</head>
+<body>
+    <div class="top-bar-box">
+        <ul class="top-bar" id="topBar">
+            <li>
+                <a href="#">
+                    <span class="material-icons">reorder</span>
+                </a>
+            </li>
+            <li>
+                <a href="./index.html">
+                    <span class="material-icons">home</span>首頁
+                </a>
+            </li>
+            <li>
+                <a href="./image.html">
+                    <span class="material-icons">image</span>圖片展示
+                </a>
+            </li>
+            <li class="selected">
+                <a href="#">
+                    <span class="material-icons">view_in_ar</span>模型展示
+                </a>
+            </li>
+            <li>
+                <a href="./about.html">
+                    <span class="material-icons">contacts</span>關於網站
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="container">
+        <model-viewer
+        alt="3D model"
+        environment-image="neutral"
+        loading="eager"
+        interaction-prompt="none"
+        auto-rotate-delay="0"
+        shadow-intensity="1"
+        camera-controls
+        auto-rotate
+        autoplay>
+            <div>
+                <span class="material-icons">chevron_left</span>
+                <p>0%</p>
+                <span class="material-icons">chevron_right</span>
+            </div>
+        </model-viewer>
+
+        <div class="card-list" id="cardList">
+        </div>
+    </div>
+</body>
+</html>

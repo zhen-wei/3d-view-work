@@ -1,0 +1,114 @@
+:root {
+    --top-h: 36px;
+}
+body{
+    font-family: 'Noto Sans TC';
+    margin: 0;
+    user-select: none;
+    overflow-x: hidden;
+}
+.selected {
+    
+    background-color: #000;
+}
+
+.top-bar-box {
+    width: 100vw;
+    height: var(--top-h);
+    background-color: #00000080;
+    position: absolute;
+    z-index: 1;
+}
+
+.top-bar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    list-style: none;
+    color: #fff;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0 24px;
+    
+}
+
+.top-bar > li {
+    width: calc(80% / 5);
+    max-width: 160px;
+    height: 100%;    
+    cursor: pointer;
+
+}
+
+.top-bar > li:hover {
+    background-color: #000;
+}
+
+.top-bar > li:first-child {
+    display: none;
+}
+
+.top-bar span {
+    padding-right: 6px;
+    pointer-events: none;
+}
+.top-bar a {
+    height: 100%;
+    color: #fff;
+    font-style: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* pointer-events: none; */
+}
+footer {
+    padding: 8px 0px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+h1 {
+    width: 100%;
+}
+input, button, select, textarea {
+    outline:none;
+}
+a {
+    -webkit-tap-highlight-color:transparent;
+}
+
+
+
+@media screen and (max-width: 700px){
+    .top-bar{
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-end;
+    }
+    .top-bar > li {
+        height: var(--top-h);
+        
+    }
+    .top-bar > li:first-child {
+        display: block;
+    }
+    .top-bar > li:not(:first-child) {
+        background-color: #000;
+        width: 180px;
+        visibility: hidden;
+    }
+    .top-bar > li:not(:first-child):hover {
+        background-color: #666;
+    }
+    
+    .top-bar a, .top-bar span {
+        height: var(--top-h);
+    }
+    .top-bar span {
+        line-height: var(--top-h);
+    }
+    
+}
