@@ -45,7 +45,7 @@ function resize() {
     } else {
         materialText.innerHTML = fullText.material.map(t => `<li>${t}</li>`).join('');
     }
-    if (w < 410) {
+    if (w < 440) {
         h1.textContent = text.titel
     } else {
         h1.innerHTML = fullText.titel
